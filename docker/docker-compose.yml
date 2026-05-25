@@ -1,0 +1,21 @@
+name: neutrino-server
+
+services:
+  neutrino-server:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    # command: tail -f /dev/null
+    volumes:
+      - ps2-roms-folder:/ps2/roms:ro
+    tty: true
+    stdin_open: true
+    # necessary for websocket connection
+    network_mode: host
+
+volumes:
+  ps2-roms-folder:
+    driver_opts:
+      type: none
+      device: $PWD/roms
+      o: bind
