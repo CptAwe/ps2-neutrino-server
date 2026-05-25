@@ -1,0 +1,24 @@
+name: neutrino-server
+
+services:
+  neutrino-server:
+    image: ghcr.io/cptawe/ps2-neutrino-server:main
+    volumes:
+      - ps2-roms-folder:/ps2/roms:ro
+    tty: true
+    stdin_open: true
+    # necessary for websocket connection
+    network_mode: host
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 10m
+        max-file: "3"
+
+volumes:
+  ps2-roms-folder:
+    driver_opts:
+      type: none
+      device: $PWD/roms
+      o: bind
