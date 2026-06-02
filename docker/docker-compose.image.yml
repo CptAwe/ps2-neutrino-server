@@ -4,7 +4,7 @@ services:
   neutrino-server:
     image: ghcr.io/cptawe/ps2-neutrino-server:main
     volumes:
-      - ps2-roms-folder:/ps2/roms:ro
+      - ps2-roms-folder:/f:rw
     tty: true
     stdin_open: true
     # necessary for websocket connection

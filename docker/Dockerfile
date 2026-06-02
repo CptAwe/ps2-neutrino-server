@@ -33,7 +33,7 @@ RUN pip install lz4
 WORKDIR /neutrino-pc
 COPY docker/stage2/deploy.sh /neutrino-pc/deploy.sh
 
-RUN mkdir -p /ps2/roms
+RUN mkdir -p /f
 
 ENTRYPOINT [ "./deploy.sh" ]
-CMD [ "python", "/neutrino-pc/neutrino/pc/udpfs_server.py", "-d", "/ps2/roms" ]
+CMD [ "python", "/neutrino-pc/neutrino/pc/udpfs_server.py", "-d", "/f" ]

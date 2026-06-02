@@ -7,7 +7,7 @@ services:
       dockerfile: ./docker/Dockerfile
     # command: tail -f /dev/null
     volumes:
-      - ps2-roms-folder:/ps2/roms:ro
+      - ps2-roms-folder:/f:rw
     tty: true
     stdin_open: true
     # necessary for websocket connection
