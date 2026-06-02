@@ -1,0 +1,2 @@
+mode: udpfs
+udpbd_ip: 10.42.0.66

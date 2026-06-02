@@ -1,6 +1,9 @@
 # ignore the neutrino src code dir
 .venv
 
-roms/*
+roms/**/*.iso
+roms/**/cache.bin
+roms/**/lastTitle.bin
+roms/**/*.png
 
 !*/.gitkeep
