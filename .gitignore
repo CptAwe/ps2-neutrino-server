@@ -5,5 +5,9 @@ roms/**/*.iso
 roms/**/cache.bin
 roms/**/lastTitle.bin
 roms/**/*.png
+roms/.hist
 
+docker/copyparty/*
+
+!docker/copyparty/.gitkeep
 !*/.gitkeep
